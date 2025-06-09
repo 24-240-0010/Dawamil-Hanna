@@ -1,0 +1,162 @@
+/* Root variables for colors and spacing */
+:root {
+  --color-background: #ffe4c4; /* light comskin beige */
+  --color-card-bg: #E9967A; /* lighter dark salmon */
+  --color-primary-text: #4a1d1c; /* deep dark salmon */
+  --color-secondary-text: #6e3b35; /* muted dark salmon */
+  --color-accent: #d94f45; /* dark salmon red accent */
+  --color-shadow: rgba(217, 79, 69, 0.25);
+  --border-radius: 0.75rem;
+  --max-width: 1200px;
+
+  --font-family-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-size-title: 48px;
+  --font-size-body: 18px;
+
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 64px;
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-secondary-text);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container to center content with max width */
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+  background: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 20px var(--color-shadow);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Large bold heading */
+.title {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-title);
+  color: var(--color-primary-text);
+  text-align: center;
+  margin: 0;
+  padding-bottom: var(--spacing-sm);
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+
+/* Card section containing the table */
+.card {
+  background: #fef7f6; /* very light comskin */
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 14px var(--color-shadow);
+  padding: var(--spacing-md);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+/* Table styling */
+.medsos-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  font-size: var(--font-size-body);
+  user-select: text;
+}
+
+.medsos-table tbody tr {
+  background: #fff3f1; /* super light salmon */
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 6px rgba(217, 79, 69, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.medsos-table tbody tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(217, 79, 69, 0.3);
+}
+
+/* Table header cells for labels */
+.medsos-table th {
+  text-align: left;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-text);
+  width: 25%;
+  vertical-align: middle;
+  user-select: text;
+  font-size: 1.125rem;
+}
+
+/* Table data cells for values */
+.medsos-table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-secondary-text);
+  vertical-align: middle;
+  white-space: pre-wrap;
+  font-weight: 500;
+}
+
+/* Footer with subtle style */
+.footer {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--color-primary-text);
+  padding-top: var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+  user-select: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  body {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  .container {
+    padding: var(--spacing-md);
+  }
+  .title {
+    font-size: 36px;
+  }
+  .medsos-table th,
+  .medsos-table td {
+    padding: 12px 8px;
+  }
+  .medsos-table th {
+    font-size: 1rem;
+  }
+  .footer {
+    font-size: 1rem;
+  }
+}
+
