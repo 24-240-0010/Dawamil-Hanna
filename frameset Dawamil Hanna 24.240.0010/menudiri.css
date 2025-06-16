@@ -1,0 +1,53 @@
+/* Reset dan dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F5F5F5; /* Warna latar belakang yang lembut */
+  color: #333; /* Warna teks */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff; /* Warna latar belakang kontainer */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease forwards;
+}
+
+h1 {
+  color: crimson; /* Warna judul */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Animasi sederhana */
+fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(15px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Penekanan kata kunci */
+strong {
+  color: crimson; /* Warna untuk kata kunci */
+  font-weight: bold;
+}
